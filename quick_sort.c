@@ -12,7 +12,7 @@ step1:
 	while(A[*pivot]<A[right]&&*pivot!=right)
 		--right;
 	if(*pivot==right)
-		return ;
+		return 0;
 	if(A[*pivot]>A[right])
 	{
 		temporary=A[*pivot];
@@ -25,7 +25,7 @@ step2:
 	while(A[left]<A[*pivot]&&left!=*pivot)
 		++left;
 	if(left==*pivot)
-		return ;
+		return 0;
 	if(A[left]>A[*pivot])
 	{
 		temporary=A[left];
