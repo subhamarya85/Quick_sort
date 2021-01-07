@@ -1,18 +1,7 @@
 #include<stdio.h>
 
-void quick_sort(int A[],int);
-int quick(int A[],int,int,int,int*);
 
 
-
-int main()
-{
-	int A[]={44,33,11,55,77,90,40,60,22,88};
-	quick_sort(A,10);
-	for(int i=0;i<=11;++i)
-	printf(" %d ",A[i]);
-
-}
 int quick(int A[],int n,int beg,int end,int *pivot)
 {
 	int left,right,temporary;
@@ -53,7 +42,7 @@ void quick_sort(int A[],int n)
 	if(n>1)
 	{
 		++top;
-		lower[top]=beg;
+		lower[top]=0;
 		upper[top]=n-1;
 	}
 	while(top!=-1)
@@ -75,5 +64,17 @@ void quick_sort(int A[],int n)
 			upper[top]=end;
 		}
 
+	}
+}
+int main()
+{
+	int i=0;
+	int A[]={44,33,11,55,77,90,40,60,22,88};
+	quick_sort(A,10);
+	printf("sorted array =");
+	while(i<10)
+	{
+		printf(" %d ",A[i]);
+		++i;
 	}
 }
