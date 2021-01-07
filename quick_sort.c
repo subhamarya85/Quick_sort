@@ -38,7 +38,7 @@ step2:
 void quick_sort(int A[],int n)
 {
 	int beg,end,pivot,top=-1;
-	int lower[10],upper[10];
+	int lower[n],upper[n];
 	if(n>1)
 	{
 		++top;
@@ -68,13 +68,19 @@ void quick_sort(int A[],int n)
 }
 int main()
 {
-	int i=0;
-	int A[]={44,33,11,55,77,90,40,60,22,88};
-	quick_sort(A,10);
+	int n;
+	printf("enter the number of elements in a array");
+	scanf("%d",&n);
+	int A[n];
+	printf("enter the elements:");
+	for(int i=0;i<n;++i)
+	{
+		scanf("%d",&A[i]);
+	}
+	quick_sort(A,n);
 	printf("sorted array =");
-	while(i<10)
+	for(int i=0;i<n;++i)
 	{
 		printf(" %d ",A[i]);
-		++i;
 	}
 }
