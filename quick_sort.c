@@ -69,14 +69,8 @@ void quick_sort(int A[],int n)
 int main()
 {
 	int n;
-	printf("enter the number of elements in a array");
-	scanf("%d",&n);
-	int A[n];
-	printf("enter the elements:");
-	for(int i=0;i<n;++i)
-	{
-		scanf("%d",&A[i]);
-	}
+	int A[]={2,45,33,67,88,95,64,56,546,4,3,6666,77,667,7};
+	n=sizeof(A)/sizeof(A[0]);
 	quick_sort(A,n);
 	printf("sorted array =");
 	for(int i=0;i<n;++i)
